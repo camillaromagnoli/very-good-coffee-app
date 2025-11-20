@@ -17,7 +17,6 @@ class CoffeeBloc extends Bloc<CoffeeEvent, CoffeeState> {
       _saveCoffee = saveCoffee,
       super(const CoffeeState.initial()) {
     on<CoffeeRequested>(_onCoffeeRequested);
-    on<CoffeeRefreshed>(_onCoffeeRequested);
     on<CoffeeSaved>(_onCoffeeSaved);
   }
 
@@ -66,7 +65,7 @@ class CoffeeBloc extends Bloc<CoffeeEvent, CoffeeState> {
       emit(
         state.copyWith(
           saveStatus: SaveStatus.failure,
-          saveFailure: Failure('Failed to save coffee. Please try again.'),
+          saveFailure: Failure(e.toString()),
         ),
       );
     }

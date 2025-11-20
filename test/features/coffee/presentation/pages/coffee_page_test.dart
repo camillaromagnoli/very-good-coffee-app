@@ -176,7 +176,7 @@ void main() {
     );
 
     testWidgets(
-      'should trigger CoffeeRefreshed when New Coffee button is tapped',
+      'should trigger CoffeeRequested when New Coffee button is tapped',
       (WidgetTester tester) async {
         coffeeBloc.emit(
           CoffeeState(

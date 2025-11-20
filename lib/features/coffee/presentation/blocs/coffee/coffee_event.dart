@@ -11,10 +11,6 @@ class CoffeeRequested extends CoffeeEvent {
   const CoffeeRequested();
 }
 
-class CoffeeRefreshed extends CoffeeEvent {
-  const CoffeeRefreshed();
-}
-
 class CoffeeSaved extends CoffeeEvent {
   const CoffeeSaved();
 }

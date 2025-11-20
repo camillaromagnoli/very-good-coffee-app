@@ -43,6 +43,7 @@ class _CoffeePageState extends State<CoffeePage> {
                 getFailureMessage(
                   state.saveFailure,
                   fallback: context.l10n.errorSavingCoffee,
+                  context: context,
                 ),
               ),
             ),
@@ -132,7 +133,7 @@ class _CoffeeContent extends StatelessWidget {
             Expanded(
               child: FilledButton.icon(
                 onPressed: () {
-                  context.read<CoffeeBloc>().add(const CoffeeRefreshed());
+                  context.read<CoffeeBloc>().add(const CoffeeRequested());
                 },
                 icon: const Icon(Icons.refresh),
                 label: Text(context.l10n.newCoffeeButton),
