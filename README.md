@@ -5,6 +5,10 @@ A Flutter application for discovering and saving random coffee images. Built wit
 
 This application allows users to discover random coffee images from the [Coffee API](https://coffee.alexflipnote.dev) and save their favorites locally for offline viewing. The app demonstrates Clean Architecture principles, error handling and a modern Material 3 UI.
 
+## Demo
+
+![App Demo](demo/demo.gif)
+
 ### Features
 
 - **Random Coffee Discovery**: Load random coffee images from the Coffee API
@@ -76,6 +80,14 @@ Make sure you have the following installed:
    ```bash
    flutter pub run build_runner build --delete-conflicting-outputs
    ```
+
+### Running the App
+
+Run the app with:
+
+```bash
+flutter run
+```
 
 ## Running Tests 🧪
 
@@ -224,34 +236,3 @@ lib/
 - **Error Handling**: Custom exceptions and failure types with user-friendly messages
 
 ---
-
-## Project Structure
-
-### Core Module
-
-- **design/**: Reusable widgets (`CoffeeImage`, `LoadingWidget`, `FailureWidget`) and design tokens (spacing, border radius)
-- **errors/**: Custom exceptions (`NetworkException`, `ServerException`, `CacheException`) and failure message mapping
-- **usecases/**: Base use case interface
-- **utils/**: App-wide constants and utilities
-
-### Coffee Feature
-
-#### Data Layer
-- **datasources/**: 
-  - `coffee_remote_data_source.dart`: Fetches coffee images from API
-  - `coffee_local_data_source.dart`: Manages local storage with Hive
-- **models/**: `coffee_model.dart` - Data transfer object
-- **repositories/**: `coffee_repository_impl.dart` - Repository implementation
-
-
-## App Flow
-
-1. **Launch App** → Coffee page loads automatically
-2. **Load Random Coffee** → Fetches image from API and displays it
-3. **Refresh** → "New Coffee" button loads another random image
-4. **Save Coffee** → "Save" button stores image locally
-5. **View Favorites** → Tap heart icon to see saved coffees
-6. **View Full Image** → Tap any favorite to view full-screen
-
----
-
