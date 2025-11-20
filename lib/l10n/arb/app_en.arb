@@ -1,0 +1,68 @@
+{
+  "@@locale": "en",
+  "coffeePageTitle": "Very Good Coffee",
+  "@coffeePageTitle": {
+    "description": "Title shown in the AppBar of the Coffee Page"
+  },
+  "favoritesPageTitle": "Favorites",
+  "@favoritesPageTitle": {
+    "description": "Title shown in the AppBar of the Favorites Page"
+  },
+  "coffeeViewerPageTitle": "Coffee",
+  "@coffeeViewerPageTitle": {
+    "description": "Title shown in the AppBar of the Coffee Viewer Page"
+  },
+  "newCoffeeButton": "New Coffee",
+  "@newCoffeeButton": {
+    "description": "Label for the button that loads a new random coffee"
+  },
+  "saveButton": "Save",
+  "@saveButton": {
+    "description": "Label for the button that saves the current coffee to favorites"
+  },
+  "retryButton": "Retry",
+  "@retryButton": {
+    "description": "Label for the retry button when an error occurs"
+  },
+  "savedToFavorites": "Saved to favorites",
+  "@savedToFavorites": {
+    "description": "Message shown when a coffee is successfully saved to favorites"
+  },
+  "failedToDisplayImage": "Failed to display image",
+  "@failedToDisplayImage": {
+    "description": "Error message shown when an image fails to display"
+  },
+  "noCoffeeYet": "No coffee yet. Try loading one!",
+  "@noCoffeeYet": {
+    "description": "Message shown when no coffee is loaded yet"
+  },
+  "noFavoritesYet": "No favorites yet.\nSave coffees you like to see them here.",
+  "@noFavoritesYet": {
+    "description": "Message shown when there are no saved favorite coffees"
+  },
+  "errorLoadingCoffee": "Something went wrong loading coffee.",
+  "@errorLoadingCoffee": {
+    "description": "Generic error message when loading coffee fails"
+  },
+  "errorLoadingFavorites": "Something went wrong loading favorites.",
+  "@errorLoadingFavorites": {
+    "description": "Generic error message when loading favorites fails"
+  },
+  "errorSavingCoffee": "Failed to save coffee. Please try again.",
+  "@errorSavingCoffee": {
+    "description": "Error message when saving coffee fails"
+  },
+  "offlineMessage": "It seems like you're offline. You can still access your favorite coffee images.",
+  "@offlineMessage": {
+    "description": "Message shown when the user is offline"
+  },
+  "viewFavoritesButton": "View Favorites",
+  "@viewFavoritesButton": {
+    "description": "Button label to navigate to favorites page"
+  },
+  "unexpectedError": "An unexpected error occurred. Please try again.",
+  "@unexpectedError": {
+    "description": "Generic error message for unexpected errors"
+  }
+}
+
