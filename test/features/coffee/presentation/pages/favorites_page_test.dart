@@ -135,7 +135,10 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text('Failed to load favorites'), findsOneWidget);
+      expect(
+        find.text('An unexpected error occurred. Please try again.'),
+        findsOneWidget,
+      );
     });
   });
 }

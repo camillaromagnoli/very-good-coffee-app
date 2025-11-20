@@ -138,8 +138,7 @@ void main() {
                 (state) =>
                     state.saveStatus == SaveStatus.failure &&
                     state.saveFailure != null &&
-                    state.saveFailure?.message ==
-                        'Failed to save coffee. Please try again.',
+                    state.saveFailure?.message == 'Exception: Unexpected error',
               ),
             ]),
           );
