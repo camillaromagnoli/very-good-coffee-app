@@ -54,8 +54,8 @@ flutter upgrade
 
 Make sure you have the following installed:
 
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (^3.8.1 or higher)
-- [Dart SDK](https://dart.dev/get-dart) (included with Flutter)
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (3.32.0 or higher)
+- [Dart SDK](https://dart.dev/get-dart) (included with Flutter - requires 3.8.1 or higher)
 - iOS Simulator or Android Emulator (or physical device)
 - Xcode (for iOS development on macOS)
 - Android Studio (for Android development)
@@ -75,7 +75,7 @@ Make sure you have the following installed:
    flutter pub get
    ```
 
-3. **Generate code (for dependency injection and localization):**
+3. **Generate code (for dependency injection):**
 
    ```bash
    flutter pub run build_runner build --delete-conflicting-outputs
@@ -104,89 +104,6 @@ To view the generated coverage report you can use [lcov](https://github.com/linu
 genhtml coverage/lcov.info -o coverage/
 # Open Coverage Report
 open coverage/index.html
-```
-
-## Working with Translations
-
-This project relies on [flutter_localizations][flutter_localizations_link] and follows the [official internationalization guide for Flutter][internationalization_link].
-
-### Adding Strings
-
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
-
-```arb
-{
-    "@@locale": "en",
-    "coffeePageTitle": "Coffee",
-    "@coffeePageTitle": {
-        "description": "Text shown in the AppBar of the Coffee Page"
-    }
-}
-```
-
-2. Then add a new key/value and description
-
-```arb
-{
-    "@@locale": "en",
-    "coffeePageTitle": "Coffee",
-    "@coffeePageTitle": {
-        "description": "Text shown in the AppBar of the Coffee Page"
-    },
-    "helloWorld": "Hello World",
-    "@helloWorld": {
-        "description": "Hello World Text"
-    }
-}
-```
-
-3. Use the new string
-
-```dart
-import 'package:very_good_coffee_app/core/l10n/l10n.dart';
-
-@override
-Widget build(BuildContext context) {
-  final l10n = context.l10n;
-  return Text(l10n.helloWorld);
-}
-```
-
-### Adding Translations
-
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
-
-```
-├── l10n
-│   ├── arb
-│   │   ├── app_en.arb
-│   │   └── app_es.arb
-```
-
-2. Add the translated strings to each `.arb` file:
-
-`app_en.arb`
-
-```arb
-{
-    "@@locale": "en",
-    "coffeePageTitle": "Coffee",
-    "@coffeePageTitle": {
-        "description": "Text shown in the AppBar of the Coffee Page"
-    }
-}
-```
-
-`app_es.arb`
-
-```arb
-{
-    "@@locale": "es",
-    "coffeePageTitle": "Café",
-    "@coffeePageTitle": {
-        "description": "Texto mostrado en la AppBar de la página del café"
-    }
-}
 ```
 
 ---
